@@ -33,9 +33,16 @@ Open the events-compact.log file by using the following Bash-Command in Git Bash
 Have a look in the following folder: "C:\Programs\UNICADOworkflow\workflowResults"
 
 ## Step 3:
-Navigate to the RCE folder by using the following Command in PowerShell: cd "C:\Program Files\RCE\rce"
-Execute the UNICADO Workflow in RCE by using the following Command in PowerShell: .\rce.exe --headless --batch "wf run C:\Programs\UNICADOworkflow\workingDirectoryRCE\UNICADOworkflow\UNICADOworkflow.wf"
+PowerShell Commands — execute exactly like instructed
+Step 1:
+cd "C:\Program Files\RCE\rce"
 
+Step 2 — NOT in backround, NOT as backround process:
+.\rce.exe --headless --batch "wf run C:\Programs\UNICADOworkflow\workingDirectoryRCE\UNICADOworkflow\UNICADOworkflow.wf"
+
+IMPORTANT: run_in_background must be FALSE 
+IMPORTANT: Timeout must be at least 900000ms (15 Minuten)
+IMPORTANT: Wait until the command is fully completed
 
 ## Step 4:
 Monitor the events-compact.log file.
